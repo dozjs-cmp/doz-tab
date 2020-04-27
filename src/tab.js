@@ -48,6 +48,7 @@ export default class extends Component{
                         list-style: none;
                         justify-content: stretch;
                         flex-wrap: wrap;
+                        user-select: none;
                     }
                     
                     .tab-buttons li {
