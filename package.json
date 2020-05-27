@@ -1,6 +1,6 @@
 {
     "name": "doz-tab",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "A simple tab component",
     "main": "dist/bundle.js",
     "scripts": {
