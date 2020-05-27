@@ -134,8 +134,8 @@ function register() {
         if (_doz.createDozWebComponent) {
             var tabProps = ['items', 'initial', 'buttons-position', 'height', 'buttons-size', 'body-background-color', 'button-color', 'button-background-color', 'button-hover-color', 'button-hover-background-color', 'button-selected-color', 'button-selected-background-color'];
 
-            (0, _doz.createDozWebComponent)('doz-tab', _tab2.default, tabProps);
-            (0, _doz.createDozWebComponent)('doz-tab-item', _tabItem2.default);
+            (0, _doz.createDozWebComponent)('doz-tab', null, tabProps);
+            //createDozWebComponent('doz-tab-item');
         }
     }
 }

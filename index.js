@@ -24,8 +24,8 @@ function register() {
                 'button-selected-background-color',
             ];
 
-            createDozWebComponent('doz-tab', tab, tabProps);
-            createDozWebComponent('doz-tab-item', tabItem);
+            createDozWebComponent('doz-tab', null, tabProps);
+            //createDozWebComponent('doz-tab-item');
         }
     }
 }
