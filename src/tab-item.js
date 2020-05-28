@@ -17,7 +17,7 @@ export default class extends Component{
                 :component {
                     display: ${this.props.show ? 'block' : 'none'};
                     height: ${this.props.height};
-                    overflow-y: auto;
+                    overflow-y: ${this.props.height === 'auto' ? 'visible' : 'auto'};
                 }
             </style>
             <dz-empty/>
