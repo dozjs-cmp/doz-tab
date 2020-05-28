@@ -1,4 +1,4 @@
-// [DozTab]  Build version: 1.2.2  
+// [DozTab]  Build version: 1.2.3  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -263,7 +263,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n            <style> \n                :component {\n                    display: ', ';\n                    height: ', ';\n                    overflow-y: auto;\n                }\n            </style>\n            <dz-empty/>\n        '], ['\n            <style> \n                :component {\n                    display: ', ';\n                    height: ', ';\n                    overflow-y: auto;\n                }\n            </style>\n            <dz-empty/>\n        ']);
+var _templateObject = _taggedTemplateLiteral(['\n            <style> \n                :component {\n                    display: ', ';\n                    height: ', ';\n                    overflow-y: ', ';\n                }\n            </style>\n            <dz-empty/>\n        '], ['\n            <style> \n                :component {\n                    display: ', ';\n                    height: ', ';\n                    overflow-y: ', ';\n                }\n            </style>\n            <dz-empty/>\n        ']);
 
 var _doz = __webpack_require__(0);
 
@@ -293,7 +293,7 @@ var _class = function (_Component) {
     _createClass(_class, [{
         key: 'template',
         value: function template(h) {
-            return h(_templateObject, this.props.show ? 'block' : 'none', this.props.height);
+            return h(_templateObject, this.props.show ? 'block' : 'none', this.props.height, this.props.height === 'auto' ? 'visible' : 'auto');
         }
     }]);
 
