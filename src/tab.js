@@ -18,6 +18,10 @@ export default class extends Component{
             buttonHoverBackgroundColor: '#444',
             buttonSelectedColor: '#fff',
             buttonSelectedBackgroundColor: '#888'
+        };
+
+        this.propsType = {
+            initial: 'number'
         }
     }
 

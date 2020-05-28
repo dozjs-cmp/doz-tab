@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.2] - 2020-05-28
+- **Fixed** `initial` attribute to number
+
 ## [1.2.1] - 2020-05-27
 - **Added** DozWebComponent example
 

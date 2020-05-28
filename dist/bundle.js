@@ -196,6 +196,10 @@ var _class = function (_Component) {
             buttonSelectedColor: '#fff',
             buttonSelectedBackgroundColor: '#888'
         };
+
+        _this.propsType = {
+            initial: 'number'
+        };
         return _this;
     }
 

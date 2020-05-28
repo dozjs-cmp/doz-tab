@@ -34,6 +34,7 @@ Live <a href="https://dozjs-cmp.github.io/doz-tab/dist/index.html">here</a>
 ## Props
 | Name | Default | Description |
 | ---- | ------- | ----------- |
+| initial | 0 | Initial tab item selected |
 | height | 200px | Body height |
 | buttons-position | top | The buttons position ca be top or bottom |
 | buttons-size | large | The buttons size can be small or large |
