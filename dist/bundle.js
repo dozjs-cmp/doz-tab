@@ -1,4 +1,4 @@
-// [DozTab]  Build version: 1.2.3  
+// [DozTab]  Build version: 1.3.0  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -131,10 +131,10 @@ function register() {
         (0, _doz.define)('doz-tab', _tab2.default);
         (0, _doz.define)('doz-tab-item', _tabItem2.default);
 
-        if (_doz.createDozWebComponent) {
+        if (_doz.defineWebComponent) {
             var tabProps = ['items', 'initial', 'buttons-position', 'height', 'buttons-size', 'body-background-color', 'button-color', 'button-background-color', 'button-hover-color', 'button-hover-background-color', 'button-selected-color', 'button-selected-background-color'];
 
-            (0, _doz.createDozWebComponent)('doz-tab', null, tabProps);
+            (0, _doz.defineWebComponent)('dwc-doz-tab', _tab2.default, tabProps);
             //createDozWebComponent('doz-tab-item');
         }
     }
