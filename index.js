@@ -1,4 +1,4 @@
-import {define, createDozWebComponent} from 'doz'
+import {define, defineWebComponent} from 'doz'
 import tab from './src/tab'
 import tabItem from './src/tab-item'
 
@@ -8,7 +8,7 @@ function register() {
         define('doz-tab', tab);
         define('doz-tab-item', tabItem);
 
-        if (createDozWebComponent) {
+        if (defineWebComponent) {
             let tabProps = [
                 'items',
                 'initial',
@@ -24,7 +24,7 @@ function register() {
                 'button-selected-background-color',
             ];
 
-            createDozWebComponent('doz-tab', null, tabProps);
+            defineWebComponent('dwc-doz-tab', tab, tabProps);
             //createDozWebComponent('doz-tab-item');
         }
     }

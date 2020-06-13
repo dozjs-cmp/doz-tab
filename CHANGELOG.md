@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.0] - 2020-06-13
+- Compatibility with doz 3.3.1
+
 ## [1.2.3] - 2020-05-28
 - **Fixed** disable overflow when height is auto
 
