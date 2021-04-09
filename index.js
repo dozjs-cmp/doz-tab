@@ -24,7 +24,11 @@ function register() {
                 'button-selected-background-color',
             ];
 
-            defineWebComponent('dwc-doz-tab', tab, tabProps);
+            let tabExposedMethods = [
+                'selectTabItem'
+            ];
+
+            defineWebComponent('dwc-doz-tab', tab, tabProps, tabExposedMethods);
             //createDozWebComponent('doz-tab-item');
         }
     }

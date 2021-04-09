@@ -9,6 +9,7 @@ export default class extends Component{
             items: [],
             initial: 0,
             buttonsPosition: 'top',
+            buttonsWrap: false,
             height: '200px',
             buttonsSize: 'large',
             bodyBackgroundColor: '#eee',
@@ -51,7 +52,8 @@ export default class extends Component{
                         margin: 0;
                         list-style: none;
                         justify-content: stretch;
-                        flex-wrap: wrap;
+                        flex-wrap: ${this.props.buttonsWrap ? 'wrap' : 'nowrap'};
+                        overflow: auto;
                         user-select: none;
                     }
                     
@@ -110,6 +112,13 @@ export default class extends Component{
             tabItem.props.show = isSelected;
             this.props.items[i].selected  = isSelected;
         }
+
+        setTimeout(() => {
+            const elSelected = document.querySelector('.tab-buttons .selected');
+            if (elSelected) {
+                elSelected.scrollIntoView();
+            }
+        })
     }
 
 };

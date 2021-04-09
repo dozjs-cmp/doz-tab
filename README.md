@@ -38,6 +38,7 @@ Live <a href="https://dozjs-cmp.github.io/doz-tab/dist/index.html">here</a>
 | height | 200px | Body height |
 | buttons-position | top | The buttons position ca be top or bottom |
 | buttons-size | large | The buttons size can be small or large |
+| buttons-wrap | false | If the value is true the container sets the css property flex-wrap to wrap|
 | body-background-color | #eee | Body background color |
 | button-color | #000 | Button color |
 | button-background-color | #ccc | Button background color |
@@ -46,6 +47,9 @@ Live <a href="https://dozjs-cmp.github.io/doz-tab/dist/index.html">here</a>
 | button-selected-color | #fff | Button selected color |
 | button-selected-background-color | #888 | Button selected background color |
 
+## Web Component
+### Exposed methods
+- selectTabItem(index)
 
 #### CDN unpkg
 ```html
