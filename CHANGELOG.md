@@ -4,8 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.4.0] - 2021-04-13
-- Compatibility with doz 3.3.1
+## [1.4.1] - 2021-05-23
+- **Fixed** disable scrollIntoView when click a tab
 
 ## [1.3.0] - 2020-06-13
 - Compatibility with doz 3.3.1

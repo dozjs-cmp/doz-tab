@@ -113,12 +113,12 @@ export default class extends Component{
             this.props.items[i].selected  = isSelected;
         }
 
-        setTimeout(() => {
+        /*setTimeout(() => {
             const elSelected = document.querySelector('.tab-buttons .selected');
             if (elSelected) {
                 elSelected.scrollIntoView();
             }
-        })
+        })*/
     }
 
 };
