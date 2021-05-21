@@ -1,4 +1,4 @@
-// [DozTab]  Build version: 1.4.0  
+// [DozTab]  Build version: 1.4.1  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -245,12 +245,12 @@ var _class = function (_Component) {
                 this.props.items[i].selected = isSelected;
             }
 
-            setTimeout(function () {
-                var elSelected = document.querySelector('.tab-buttons .selected');
+            /*setTimeout(() => {
+                const elSelected = document.querySelector('.tab-buttons .selected');
                 if (elSelected) {
                     elSelected.scrollIntoView();
                 }
-            });
+            })*/
         }
     }]);
 
