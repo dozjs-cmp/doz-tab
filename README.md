@@ -32,20 +32,20 @@ Live <a href="https://dozjs-cmp.github.io/doz-tab/dist/index.html">here</a>
 ```
 
 ## Props
-| Name | Default | Description |
-| ---- | ------- | ----------- |
-| initial | 0 | Initial tab item selected |
-| height | 200px | Body height |
-| buttons-position | top | The buttons position ca be top or bottom |
-| buttons-size | large | The buttons size can be small or large |
-| buttons-wrap | false | If the value is true the container sets the css property flex-wrap to wrap|
-| body-background-color | #eee | Body background color |
-| button-color | #000 | Button color |
-| button-background-color | #ccc | Button background color |
-| button-hover-color | #fff | Button hover color |
-| button-hover-background-color | #444 | Button hover background color |
-| button-selected-color | #fff | Button selected color |
-| button-selected-background-color | #888 | Button selected background color |
+| Name | Default | Description                                                                |
+| ---- | ------- |----------------------------------------------------------------------------|
+| initial | 0 | Initial tab item selected                                                  |
+| height | 200px | Body height                                                                |
+| buttons-position | top | The buttons position can be top, bottom, left, right                       |
+| buttons-size | large | The buttons size can be small or large                                     |
+| buttons-wrap | false | If the value is true the container sets the css property flex-wrap to wrap |
+| body-background-color | #eee | Body background color                                                      |
+| button-color | #000 | Button color                                                               |
+| button-background-color | #ccc | Button background color                                                    |
+| button-hover-color | #fff | Button hover color                                                         |
+| button-hover-background-color | #444 | Button hover background color                                              |
+| button-selected-color | #fff | Button selected color                                                      |
+| button-selected-background-color | #888 | Button selected background color                                           |
 
 ## Web Component
 ### Exposed methods

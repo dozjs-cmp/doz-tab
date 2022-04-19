@@ -8,7 +8,7 @@ export default class Tab extends Component{
         this.props = {
             items: [],
             initial: 0,
-            buttonsPosition: 'top',
+            buttonsPosition: 'top', //top|left|right|bottom
             buttonsWrap: false,
             height: '200px',
             buttonsSize: 'large',
@@ -27,6 +27,8 @@ export default class Tab extends Component{
     }
 
     template(h) {
+        let isVertical = this.props.buttonsPosition === 'left' || this.props.buttonsPosition === 'right';
+        //language=html
         return h`
             <div class="tab-controller">
                 <style> 
@@ -35,24 +37,38 @@ export default class Tab extends Component{
                     }
                     
                     :component {
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-direction: ${this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column' };
+                        ${isVertical 
+                            ? `
+                                display: flex;
+                                flex-direction: ${this.props.buttonsPosition === 'left' ? 'row-reverse' : 'row' } ;
+                            ` 
+                            : `
+                                display: flex;
+                                flex-wrap: wrap;
+                                flex-direction: ${this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column' };
+                            `
+                        }
+                        
                         background: ${this.props.bodyBackgroundColor};
                     }
 
                     .tab-controller {
-                        width: 100%;
+                        ${isVertical
+                            ? ``
+                            : `width: 100%;`
+                        }
                     }
                     
                     ul.tab-buttons {
                         display: flex;
                         flex: 1;
+                        flex-wrap: ${this.props.buttonsWrap ? 'wrap' : 'nowrap'};
+                        flex-direction: ${isVertical ? 'column' : 'unset'};
+                        justify-content: stretch;
+                        
                         padding: 0;
                         margin: 0;
                         list-style: none;
-                        justify-content: stretch;
-                        flex-wrap: ${this.props.buttonsWrap ? 'wrap' : 'nowrap'};
                         overflow: auto;
                         user-select: none;
                     }

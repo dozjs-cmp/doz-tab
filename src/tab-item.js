@@ -12,9 +12,11 @@ export default class TabItem extends Component{
     }
 
     template(h) {
+        //language=html
         return h`
             <style> 
                 :component {
+                    width: 100%;
                     display: ${this.props.show ? 'block' : 'none'};
                     height: ${this.props.height};
                     overflow-y: ${this.props.height === 'auto' ? 'visible' : 'auto'};
