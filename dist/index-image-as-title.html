@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="DOZ - COMPONENT">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>DOZ - COMPONENT</title>
+    <script src="https://unpkg.com/doz/dist/doz.js"></script>
+    <script src="bundle.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+
+    /*const MyComponent = class extends Doz.Component {
+        template(h) {
+            return h`
+                <div>This is a component passes via prop</div>
+            `
+        }
+    }*/
+
+    const MyComponent = function (h) {
+        return h`
+            <div>This is a component passes via prop</div>
+        `
+    }
+
+
+    new Doz({
+        root: '#app',
+        props: {
+            time: '-'
+        },
+        template(h) {
+            //language=html
+            return h`
+                <doz-tab buttons-position="top" initial="0">
+                    <doz-tab-item title="${MyComponent}">content 1</doz-tab-item>
+                    <doz-tab-item title="Tab 2">content 2</doz-tab-item>
+                    <doz-tab-item title="Tab 3">content 3</doz-tab-item>
+                </doz-tab>
+            `
+        }
+    });
+
+</script>
+</body>
+</html>
