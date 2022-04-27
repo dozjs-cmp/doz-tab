@@ -6,6 +6,7 @@ export default class TabItem extends Component{
         super(o);
 
         this.props = {
+            __is_tab_item: true,
             show: false,
             height: '50px'
         }

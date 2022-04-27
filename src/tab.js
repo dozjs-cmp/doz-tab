@@ -97,7 +97,9 @@ export default class Tab extends Component{
                 </style>
                 <ul class="tab-buttons">
                     ${this.props.items.map((item, i) => h`
-                        <li forceupdate class="${item.selected ? 'selected' : ''}" onclick="${() => this.selectTabItem(i)}">${item.title}</li>
+                        <li forceupdate class="${item.selected ? 'selected' : ''}" onclick="${() => this.selectTabItem(i)}">
+                            ${typeof item.title === 'function' ? h`<${item.title}/>` : item.title}
+                        </li>
                     `)}
                 </ul>
             </div>
@@ -123,8 +125,9 @@ export default class Tab extends Component{
         let tabItem;
         let isSelected;
         for (let i = 0; i < itemComponents.length; i++) {
-            isSelected = i === index;
             tabItem = itemComponents[i];
+            if (!tabItem.props.__is_tab_item) continue;
+            isSelected = i === index;
             tabItem.props.show = isSelected;
             this.props.items[i].selected  = isSelected;
         }
