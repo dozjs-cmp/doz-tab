@@ -1,4 +1,4 @@
-// [DozTab]  Build version: 1.6.0  
+// [DozTab]  Build version: 1.7.0  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -119,7 +119,7 @@ var external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_ = __webpack_require__(
 // CONCATENATED MODULE: ./src/tab.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
-var _templateObject, _templateObject2;
+var _templateObject, _templateObject2, _templateObject3;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -186,9 +186,9 @@ var Tab = /*#__PURE__*/function (_Component) {
       var isVertical = this.props.buttonsPosition === 'left' || this.props.buttonsPosition === 'right'; //language=html
 
       return h(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            <div class=\"tab-controller\">\n                <style> \n                    * {\n                        box-sizing: border-box;\n                    }\n                    \n                    :component {\n                        ", "\n                        \n                        background: ", ";\n                    }\n\n                    .tab-controller {\n                        ", "\n                    }\n                    \n                    ul.tab-buttons {\n                        display: flex;\n                        flex: 1;\n                        flex-wrap: ", ";\n                        flex-direction: ", ";\n                        justify-content: stretch;\n                        \n                        padding: 0;\n                        margin: 0;\n                        list-style: none;\n                        overflow: auto;\n                        user-select: none;\n                    }\n                    \n                    .tab-buttons li {\n                        cursor: pointer;\n                        flex: 1;\n                        padding: ", " ;\n                        color: ", ";\n                        background: ", ";\n                        text-align: center;\n                        text-transform: uppercase;\n                        font-size: ", ";\n                        font-weight: bold;\n                    }\n                    \n                    .tab-buttons li:hover {\n                        color: ", ";\n                        background: ", ";\n                    }\n                    \n                    .tab-buttons li.selected {\n                        color: ", ";\n                        background: ", ";\n                    }\n                </style>\n                <ul class=\"tab-buttons\">\n                    ", "\n                </ul>\n            </div>\n        "])), isVertical ? "\n                                display: flex;\n                                flex-direction: ".concat(this.props.buttonsPosition === 'left' ? 'row-reverse' : 'row', " ;\n                            ") : "\n                                display: flex;\n                                flex-wrap: wrap;\n                                flex-direction: ".concat(this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column', ";\n                            "), this.props.bodyBackgroundColor, isVertical ? "" : "width: 100%;", this.props.buttonsWrap ? 'wrap' : 'nowrap', isVertical ? 'column' : 'unset', this.props.buttonsSize === 'large' ? '16px' : '8px', this.props.buttonColor, this.props.buttonBackgroundColor, this.props.buttonSize === 'large' ? '14px' : '12px', this.props.buttonHoverColor, this.props.buttonHoverBackgroundColor, this.props.buttonSelectedColor, this.props.buttonSelectedBackgroundColor, this.props.items.map(function (item, i) {
-        return h(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n                        <li forceupdate class=\"", "\" onclick=\"", "\">", "</li>\n                    "])), item.selected ? 'selected' : '', function () {
+        return h(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n                        <li forceupdate class=\"", "\" onclick=\"", "\">\n                            ", "\n                        </li>\n                    "])), item.selected ? 'selected' : '', function () {
           return _this2.selectTabItem(i);
-        }, item.title);
+        }, typeof item.title === 'function' ? h(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["<", "/>"])), item.title) : item.title);
       }));
     }
   }, {
@@ -216,8 +216,9 @@ var Tab = /*#__PURE__*/function (_Component) {
       var isSelected;
 
       for (var i = 0; i < itemComponents.length; i++) {
-        isSelected = i === index;
         tabItem = itemComponents[i];
+        if (!tabItem.props.__is_tab_item) continue;
+        isSelected = i === index;
         tabItem.props.show = isSelected;
         this.props.items[i].selected = isSelected;
       }
@@ -277,6 +278,7 @@ var TabItem = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, o);
     _this.props = {
+      __is_tab_item: true,
       show: false,
       height: '50px'
     };
