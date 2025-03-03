@@ -1,4 +1,4 @@
-// [DozTab]  Build version: 1.7.0  
+// [DozTab]  Build version: 1.8.0  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -117,45 +117,27 @@ __webpack_require__.d(__webpack_exports__, "tabItem", function() { return /* ree
 var external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_ = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./src/tab.js
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var _templateObject, _templateObject2, _templateObject3;
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
+function _taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
 
 var Tab = /*#__PURE__*/function (_Component) {
-  _inherits(Tab, _Component);
-
-  var _super = _createSuper(Tab);
-
   function Tab(o) {
     var _this;
-
     _classCallCheck(this, Tab);
-
-    _this = _super.call(this, o);
+    _this = _callSuper(this, Tab, [o]);
     _this.props = {
       items: [],
       initial: 0,
@@ -177,26 +159,42 @@ var Tab = /*#__PURE__*/function (_Component) {
     };
     return _this;
   }
-
-  _createClass(Tab, [{
+  _inherits(Tab, _Component);
+  return _createClass(Tab, [{
     key: "template",
     value: function template(h) {
       var _this2 = this;
-
-      var isVertical = this.props.buttonsPosition === 'left' || this.props.buttonsPosition === 'right'; //language=html
-
-      return h(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            <div class=\"tab-controller\">\n                <style> \n                    * {\n                        box-sizing: border-box;\n                    }\n                    \n                    :component {\n                        ", "\n                        \n                        background: ", ";\n                    }\n\n                    .tab-controller {\n                        ", "\n                    }\n                    \n                    ul.tab-buttons {\n                        display: flex;\n                        flex: 1;\n                        flex-wrap: ", ";\n                        flex-direction: ", ";\n                        justify-content: stretch;\n                        \n                        padding: 0;\n                        margin: 0;\n                        list-style: none;\n                        overflow: auto;\n                        user-select: none;\n                    }\n                    \n                    .tab-buttons li {\n                        cursor: pointer;\n                        flex: 1;\n                        padding: ", " ;\n                        color: ", ";\n                        background: ", ";\n                        text-align: center;\n                        text-transform: uppercase;\n                        font-size: ", ";\n                        font-weight: bold;\n                    }\n                    \n                    .tab-buttons li:hover {\n                        color: ", ";\n                        background: ", ";\n                    }\n                    \n                    .tab-buttons li.selected {\n                        color: ", ";\n                        background: ", ";\n                    }\n                </style>\n                <ul class=\"tab-buttons\">\n                    ", "\n                </ul>\n            </div>\n        "])), isVertical ? "\n                                display: flex;\n                                flex-direction: ".concat(this.props.buttonsPosition === 'left' ? 'row-reverse' : 'row', " ;\n                            ") : "\n                                display: flex;\n                                flex-wrap: wrap;\n                                flex-direction: ".concat(this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column', ";\n                            "), this.props.bodyBackgroundColor, isVertical ? "" : "width: 100%;", this.props.buttonsWrap ? 'wrap' : 'nowrap', isVertical ? 'column' : 'unset', this.props.buttonsSize === 'large' ? '16px' : '8px', this.props.buttonColor, this.props.buttonBackgroundColor, this.props.buttonSize === 'large' ? '14px' : '12px', this.props.buttonHoverColor, this.props.buttonHoverBackgroundColor, this.props.buttonSelectedColor, this.props.buttonSelectedBackgroundColor, this.props.items.map(function (item, i) {
-        return h(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n                        <li forceupdate class=\"", "\" onclick=\"", "\">\n                            ", "\n                        </li>\n                    "])), item.selected ? 'selected' : '', function () {
+      var isVertical = this.props.buttonsPosition === 'left' || this.props.buttonsPosition === 'right';
+      //language=html
+      return h(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            <div class=\"tab-controller\">\n                <style>\n                    * {\n                        box-sizing: border-box;\n                    }\n\n                    :component {\n                        ", "\n\n                        background: ", ";\n                    }\n\n                    .tab-controller {\n                        ", "\n                    }\n\n                    ul.tab-buttons {\n                        display: flex;\n                        flex: 1;\n                        flex-wrap: ", ";\n                        flex-direction: ", ";\n                        justify-content: stretch;\n\n                        padding: 0;\n                        margin: 0;\n                        list-style: none;\n                        overflow: auto;\n                        user-select: none;\n                    }\n\n                    .tab-buttons li {\n                        cursor: pointer;\n                        flex: 1;\n                        padding: ", ";\n                        color: ", ";\n                        background: ", ";\n                        text-align: center;\n                        text-transform: uppercase;\n                        font-size: ", ";\n                        font-weight: bold;\n                    }\n\n                    .tab-buttons li:hover {\n                        color: ", ";\n                        background: ", ";\n                    }\n\n                    .tab-buttons li.selected {\n                        color: ", ";\n                        background: ", ";\n                    }\n\n                    /*.tab-buttons li.focus {*/\n                    /*    outline: 1px solid inherit;*/\n                    /*    background: red;*/\n                    /*}*/\n                </style>\n                <ul class=\"tab-buttons\">\n                    ", "\n                </ul>\n            </div>\n        "])), isVertical ? "\n                                display: flex;\n                                flex-direction: ".concat(this.props.buttonsPosition === 'left' ? 'row-reverse' : 'row', " ;\n                            ") : "\n                                display: flex;\n                                flex-wrap: wrap;\n                                flex-direction: ".concat(this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column', ";\n                            "), this.props.bodyBackgroundColor, isVertical ? "" : "width: 100%;", this.props.buttonsWrap ? 'wrap' : 'nowrap', isVertical ? 'column' : 'unset', this.props.buttonsSize === 'large' ? '16px' : '8px', this.props.buttonColor, this.props.buttonBackgroundColor, this.props.buttonSize === 'large' ? '14px' : '12px', this.props.buttonHoverColor, this.props.buttonHoverBackgroundColor, this.props.buttonSelectedColor, this.props.buttonSelectedBackgroundColor, this.props.items.map(function (item, i) {
+        return h(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n                        <li forceupdate class=\"", "\" onkeydown=\"", "\" onclick=\"", "\">\n                            ", "\n                        </li>\n                    "])), item.selected ? 'selected' : '', function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            // Supporta anche lo Space
+            event.preventDefault(); // Evita comportamenti predefiniti (es. scroll con Space)
+            _this2.selectTabItem(i);
+          }
+        }, function () {
           return _this2.selectTabItem(i);
         }, typeof item.title === 'function' ? h(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["<", "/>"])), item.title) : item.title);
       }));
+    }
+  }, {
+    key: "onUpdate",
+    value: function onUpdate() {
+      setTimeout(function () {
+        document.querySelectorAll('.tab-buttons li').forEach(function (item) {
+          item.setAttribute('tabindex', '0');
+          if (item.classList.contains('selected')) {
+            item.focus();
+          }
+        });
+      }, 100);
     }
   }, {
     key: "onMountAsync",
     value: function onMountAsync() {
       var itemComponents = Object.values(this.children);
       var tabItem;
-
       for (var i = 0; i < itemComponents.length; i++) {
         tabItem = itemComponents[i];
         tabItem.props.height = this.props.height;
@@ -205,7 +203,6 @@ var Tab = /*#__PURE__*/function (_Component) {
           selected: false
         });
       }
-
       this.selectTabItem(this.props.initial);
     }
   }, {
@@ -214,7 +211,6 @@ var Tab = /*#__PURE__*/function (_Component) {
       var itemComponents = Object.values(this.children);
       var tabItem;
       var isSelected;
-
       for (var i = 0; i < itemComponents.length; i++) {
         tabItem = itemComponents[i];
         if (!tabItem.props.__is_tab_item) continue;
@@ -222,61 +218,40 @@ var Tab = /*#__PURE__*/function (_Component) {
         tabItem.props.show = isSelected;
         this.props.items[i].selected = isSelected;
       }
+
       /*setTimeout(() => {
           const elSelected = document.querySelector('.tab-buttons .selected');
           if (elSelected) {
               elSelected.scrollIntoView();
           }
       })*/
-
     }
   }]);
-
-  return Tab;
 }(external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["Component"]);
-
 
 ;
 // CONCATENATED MODULE: ./src/tab-item.js
-function tab_item_typeof(obj) { "@babel/helpers - typeof"; return tab_item_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, tab_item_typeof(obj); }
-
+function tab_item_typeof(o) { "@babel/helpers - typeof"; return tab_item_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, tab_item_typeof(o); }
 var tab_item_templateObject;
-
-function tab_item_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-function tab_item_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function tab_item_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function tab_item_createClass(Constructor, protoProps, staticProps) { if (protoProps) tab_item_defineProperties(Constructor.prototype, protoProps); if (staticProps) tab_item_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function tab_item_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) tab_item_setPrototypeOf(subClass, superClass); }
-
-function tab_item_setPrototypeOf(o, p) { tab_item_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return tab_item_setPrototypeOf(o, p); }
-
-function tab_item_createSuper(Derived) { var hasNativeReflectConstruct = tab_item_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = tab_item_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = tab_item_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return tab_item_possibleConstructorReturn(this, result); }; }
-
-function tab_item_possibleConstructorReturn(self, call) { if (call && (tab_item_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return tab_item_assertThisInitialized(self); }
-
-function tab_item_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function tab_item_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function tab_item_getPrototypeOf(o) { tab_item_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return tab_item_getPrototypeOf(o); }
-
-
+function tab_item_taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })); }
+function tab_item_classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function tab_item_defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, tab_item_toPropertyKey(o.key), o); } }
+function tab_item_createClass(e, r, t) { return r && tab_item_defineProperties(e.prototype, r), t && tab_item_defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function tab_item_toPropertyKey(t) { var i = tab_item_toPrimitive(t, "string"); return "symbol" == tab_item_typeof(i) ? i : i + ""; }
+function tab_item_toPrimitive(t, r) { if ("object" != tab_item_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != tab_item_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function tab_item_callSuper(t, o, e) { return o = tab_item_getPrototypeOf(o), tab_item_possibleConstructorReturn(t, tab_item_isNativeReflectConstruct() ? Reflect.construct(o, e || [], tab_item_getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function tab_item_possibleConstructorReturn(t, e) { if (e && ("object" == tab_item_typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return tab_item_assertThisInitialized(t); }
+function tab_item_assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function tab_item_isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (tab_item_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function tab_item_getPrototypeOf(t) { return tab_item_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, tab_item_getPrototypeOf(t); }
+function tab_item_inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && tab_item_setPrototypeOf(t, e); }
+function tab_item_setPrototypeOf(t, e) { return tab_item_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, tab_item_setPrototypeOf(t, e); }
 
 var TabItem = /*#__PURE__*/function (_Component) {
-  tab_item_inherits(TabItem, _Component);
-
-  var _super = tab_item_createSuper(TabItem);
-
   function TabItem(o) {
     var _this;
-
     tab_item_classCallCheck(this, TabItem);
-
-    _this = _super.call(this, o);
+    _this = tab_item_callSuper(this, TabItem, [o]);
     _this.props = {
       __is_tab_item: true,
       show: false,
@@ -284,40 +259,36 @@ var TabItem = /*#__PURE__*/function (_Component) {
     };
     return _this;
   }
-
-  tab_item_createClass(TabItem, [{
+  tab_item_inherits(TabItem, _Component);
+  return tab_item_createClass(TabItem, [{
     key: "template",
     value: function template(h) {
       //language=html
       return h(tab_item_templateObject || (tab_item_templateObject = tab_item_taggedTemplateLiteral(["\n            <style> \n                :component {\n                    width: 100%;\n                    display: ", ";\n                    height: ", ";\n                    overflow-y: ", ";\n                }\n            </style>\n            <dz-empty/>\n        "])), this.props.show ? 'block' : 'none', this.props.height, this.props.height === 'auto' ? 'visible' : 'auto');
     }
   }]);
-
-  return TabItem;
 }(external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["Component"]);
-
 
 ;
 // CONCATENATED MODULE: ./index.js
 
 
- // expose component to global scope
 
+
+// expose component to global scope
 function register() {
   if (typeof window !== 'undefined') {
     Object(external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["define"])('doz-tab', Tab);
     Object(external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["define"])('doz-tab-item', TabItem);
-
     if (external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["defineWebComponent"]) {
       var tabProps = ['items', 'initial', 'buttons-position', 'height', 'buttons-size', 'body-background-color', 'button-color', 'button-background-color', 'button-hover-color', 'button-hover-background-color', 'button-selected-color', 'button-selected-background-color'];
       var tabExposedMethods = ['selectTabItem'];
-      Object(external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["defineWebComponent"])('dwc-doz-tab', Tab, tabProps, tabExposedMethods); //createDozWebComponent('doz-tab-item');
+      Object(external_commonjs_doz_commonjs2_doz_amd_doz_root_Doz_["defineWebComponent"])('dwc-doz-tab', Tab, tabProps, tabExposedMethods);
+      //createDozWebComponent('doz-tab-item');
     }
   }
 }
-
 register();
-
 
 if (false) {}
 
