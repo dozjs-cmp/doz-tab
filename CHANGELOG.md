@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.8.0] - 2025-03-03
+- **Added** support to tabindex 
+
 ## [1.7.0] - 2022-04-27
 - **Added** support to title as component
 

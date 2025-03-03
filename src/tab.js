@@ -1,6 +1,6 @@
 import {Component} from "doz";
 
-export default class Tab extends Component{
+export default class Tab extends Component {
 
     constructor(o) {
         super(o);
@@ -31,52 +31,52 @@ export default class Tab extends Component{
         //language=html
         return h`
             <div class="tab-controller">
-                <style> 
+                <style>
                     * {
                         box-sizing: border-box;
                     }
-                    
+
                     :component {
-                        ${isVertical 
-                            ? `
+                        ${isVertical
+                                ? `
                                 display: flex;
-                                flex-direction: ${this.props.buttonsPosition === 'left' ? 'row-reverse' : 'row' } ;
-                            ` 
-                            : `
+                                flex-direction: ${this.props.buttonsPosition === 'left' ? 'row-reverse' : 'row'} ;
+                            `
+                                : `
                                 display: flex;
                                 flex-wrap: wrap;
-                                flex-direction: ${this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column' };
+                                flex-direction: ${this.props.buttonsPosition === 'top' ? 'column-reverse' : 'column'};
                             `
                         }
-                        
+
                         background: ${this.props.bodyBackgroundColor};
                     }
 
                     .tab-controller {
                         ${isVertical
-                            ? ``
-                            : `width: 100%;`
+                                ? ``
+                                : `width: 100%;`
                         }
                     }
-                    
+
                     ul.tab-buttons {
                         display: flex;
                         flex: 1;
                         flex-wrap: ${this.props.buttonsWrap ? 'wrap' : 'nowrap'};
                         flex-direction: ${isVertical ? 'column' : 'unset'};
                         justify-content: stretch;
-                        
+
                         padding: 0;
                         margin: 0;
                         list-style: none;
                         overflow: auto;
                         user-select: none;
                     }
-                    
+
                     .tab-buttons li {
                         cursor: pointer;
                         flex: 1;
-                        padding: ${this.props.buttonsSize === 'large' ? '16px' : '8px'} ;
+                        padding: ${this.props.buttonsSize === 'large' ? '16px' : '8px'};
                         color: ${this.props.buttonColor};
                         background: ${this.props.buttonBackgroundColor};
                         text-align: center;
@@ -84,26 +84,47 @@ export default class Tab extends Component{
                         font-size: ${this.props.buttonSize === 'large' ? '14px' : '12px'};
                         font-weight: bold;
                     }
-                    
+
                     .tab-buttons li:hover {
                         color: ${this.props.buttonHoverColor};
                         background: ${this.props.buttonHoverBackgroundColor};
                     }
-                    
+
                     .tab-buttons li.selected {
                         color: ${this.props.buttonSelectedColor};
                         background: ${this.props.buttonSelectedBackgroundColor};
                     }
+
+                    /*.tab-buttons li.focus {*/
+                    /*    outline: 1px solid inherit;*/
+                    /*    background: red;*/
+                    /*}*/
                 </style>
                 <ul class="tab-buttons">
                     ${this.props.items.map((item, i) => h`
-                        <li forceupdate class="${item.selected ? 'selected' : ''}" onclick="${() => this.selectTabItem(i)}">
+                        <li forceupdate class="${item.selected ? 'selected' : ''}" onkeydown="${(event) => {
+                        if (event.key === "Enter" || event.key === " ") { // Supporta anche lo Space
+                            event.preventDefault(); // Evita comportamenti predefiniti (es. scroll con Space)
+                            this.selectTabItem(i)
+                        }
+                    }}" onclick="${() => this.selectTabItem(i)}">
                             ${typeof item.title === 'function' ? h`<${item.title}/>` : item.title}
                         </li>
                     `)}
                 </ul>
             </div>
         `
+    }
+
+    onUpdate() {
+        setTimeout(() => {
+            document.querySelectorAll('.tab-buttons li').forEach((item) => {
+                item.setAttribute('tabindex', '0');
+                if (item.classList.contains('selected')) {
+                    item.focus()
+                }
+            });
+        }, 100)
     }
 
     onMountAsync() {
@@ -129,7 +150,7 @@ export default class Tab extends Component{
             if (!tabItem.props.__is_tab_item) continue;
             isSelected = i === index;
             tabItem.props.show = isSelected;
-            this.props.items[i].selected  = isSelected;
+            this.props.items[i].selected = isSelected;
         }
 
         /*setTimeout(() => {
