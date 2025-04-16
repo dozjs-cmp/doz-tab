@@ -100,12 +100,18 @@ export default class Tab extends Component {
                     /*    background: red;*/
                     /*}*/
                 </style>
-                <ul class="tab-buttons">
-                    ${this.props.items.map((item, i) => h`
+                <ul class="tab-buttons" role="tablist">
+                    ${this.props.items.map((item, i, total) => h`
                         <li forceupdate class="${item.selected ? 'selected' : ''}" onkeydown="${(event) => {
+                            // console.log(event.key)
                         if (event.key === "Enter" || event.key === " ") { // Supporta anche lo Space
                             event.preventDefault(); // Evita comportamenti predefiniti (es. scroll con Space)
                             this.selectTabItem(i)
+                        } else if (event.key === "ArrowRight") {
+                            this.selectTabItem((i + 1) % total.length)
+                            
+                        } else if (event.key === "ArrowLeft") {
+                            this.selectTabItem((i - 1 + total.length) % total.length)
                         }
                     }}" onclick="${() => this.selectTabItem(i)}">
                             ${typeof item.title === 'function' ? h`<${item.title}/>` : item.title}
@@ -119,8 +125,12 @@ export default class Tab extends Component {
     onUpdate() {
         setTimeout(() => {
             document.querySelectorAll('.tab-buttons li').forEach((item) => {
+                item.setAttribute('role', 'tab');
                 item.setAttribute('tabindex', '0');
+                item.setAttribute('aria-selected', 'false');
                 if (item.classList.contains('selected')) {
+                    // item.setAttribute('tabindex', '0');
+                    item.setAttribute('aria-selected', 'true');
                     item.focus()
                 }
             });
